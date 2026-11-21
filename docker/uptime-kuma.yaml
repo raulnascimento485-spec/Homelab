@@ -1,0 +1,24 @@
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:2
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "${SERVER_IP}:3001:3001"
+    volumes:
+      - uptime-kuma-data:/app/data
+    networks:
+      default:
+      projeto-web:
+        ipv4_address: 172.18.0.10
+
+volumes:
+  uptime-kuma-data:
+
+networks:
+  projeto-web:
+    external: true
+    name: projeto-web_default
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16

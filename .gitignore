@@ -1,0 +1,32 @@
+# Credenciais e variáveis de ambiente
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pub
+
+# Chaves privadas
+identity.txt
+id_ed25519
+id_rsa
+
+# Backups e arquivos criptografados
+*.sql
+*.sql.age
+*.dump
+*.tar
+*.tar.gz
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.bak
+*~
+
+# Dados persistentes
+data/
+postgres-data/
+uptime-kuma-data/
