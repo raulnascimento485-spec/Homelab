@@ -1,0 +1,22 @@
+
+services:
+  gitea:
+    image: docker.gitea.com/gitea:latest
+    container_name: gitea
+    restart: unless-stopped
+
+    ports:
+      - "${SERVER_IP}:3000:3000"
+      - "${SERVER_IP}:2222:22"
+
+    volumes:
+      - gitea-data:/data
+
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - GITEA__server__SSH_DOMAIN=${SERVER_IP}
+      - GITEA__server__SSH_PORT=2222
+
+volumes:
+  gitea-data:

@@ -25,6 +25,7 @@ Servidor baseado em Ubuntu Server, utilizando Docker para executar serviços ind
 | Netdata | Monitoramento de recursos |
 | Uptime Kuma | Monitoramento de disponibilidade e alertas |
 | Dozzle | Visualização de logs dos containers |
+| Gitea | Hospedagem e gerenciamento de repositórios Git |
 
 ## Tecnologias
 
@@ -36,6 +37,10 @@ Servidor baseado em Ubuntu Server, utilizando Docker para executar serviços ind
 - Nginx
 - Git
 - GitHub
+- SQLite
+- Gitea
+- SSH
+- UFW
 
 ## Estrutura do repositório
 
@@ -45,6 +50,7 @@ homelab/
 │   ├── projeto-web.yaml
 │   ├── uptime-kuma.yaml
 │   ├── dozzle.yaml
+│   ├── gitea.yaml
 │   └── .env.example
 ├── docs/
 ├── scripts/
